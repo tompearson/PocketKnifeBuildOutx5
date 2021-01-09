@@ -39,7 +39,22 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+//    //    My Libraries in AAR publish
+    implementation project(path: ':Library_isItRooted')
+//    implementation project(path: ':Library_getBlueToothStatus')
+//    implementation project(path: ':Library_getNetworkStatus')
+//    implementation project(path: ':Library_getLocationStatus')
+//    implementation project(path: ':Library_getMACAddress')
+//    implementation project(path: ':Library_WithPermissions')
+//    implementation project(path: ':Library_map')
+
+    //    App Center
+    def appCenterSdkVersion = '3.2.2'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
 }

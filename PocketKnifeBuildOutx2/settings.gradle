@@ -1,3 +1,3 @@
-include ':app:mylibrary1'
+include ':app:Library_isItRooted'
 include ':app'
 rootProject.name = "PocketKnifeBuildOutx2"

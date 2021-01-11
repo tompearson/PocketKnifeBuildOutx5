@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        lateinit var toast: Toast
+//        lateinit var toast: Toast
         lateinit var textMessage: TextView
         lateinit var button: Button
         lateinit var crash_button: Button
@@ -62,7 +62,12 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-
+//        methodWithPermissions(this)
+//
+//        textMessage.setText(getNetworkStatus(this, builder))
+//        textMessage.setText(getLocationStatus(this, builder))
+//        textMessage.setText(getBlueToothStatus(this, builder))
+//        textMessage.setText(getMACAddress(this, builder))
         textMessage.setText(isItRooted(this, builder))
 
         crash_button.setOnClickListener {

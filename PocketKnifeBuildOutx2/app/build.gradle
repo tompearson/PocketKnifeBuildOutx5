@@ -50,6 +50,6 @@ dependencies {
     implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
 
     //    //    My Libraries in AAR publish
-    implementation project(path: ':app:mylibrary1')
+    implementation project(path: ':app:Library_isItRooted')
 
 }

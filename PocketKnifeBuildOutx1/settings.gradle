@@ -1,0 +1,4 @@
+//include ':Library_Trial1'
+include ':Library_isItRooted'
+include ':app'
+rootProject.name = "PocketKnifeBuildOutx1"

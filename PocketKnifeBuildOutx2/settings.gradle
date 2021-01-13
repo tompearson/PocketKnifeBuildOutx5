@@ -1,3 +1,4 @@
+include ':library_getbluetoothstatus'
 include ':app:Library_isItRooted'
 include ':app'
 rootProject.name = "PocketKnifeBuildOutx2"

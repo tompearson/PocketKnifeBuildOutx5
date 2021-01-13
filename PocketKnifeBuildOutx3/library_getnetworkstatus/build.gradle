@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
 }
 
@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.pocketknifebuildoutx2"
+//        applicationId "com.example.library_getnetworkstatus"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -42,19 +42,4 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-    //    App Center
-    def appCenterSdkVersion = '3.2.2'
-    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
-    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
-    implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
-
-    //    //    My Libraries in AAR publish
-    implementation project(path: ':app:Library_isItRooted')
-    implementation project(path: ':app:com.example.library_getbluetoothstatus')
-
-
-
-//    implementation project(path: 'app:Library_getMAC_Address')
-
 }

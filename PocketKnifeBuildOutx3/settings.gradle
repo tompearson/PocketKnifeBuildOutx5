@@ -1,0 +1,5 @@
+include ':library_getnetworkstatus'
+include ':library_isrooted'
+include ':library_withpermissions'
+include ':app'
+rootProject.name = "PocketKnifeBuildOutx3"

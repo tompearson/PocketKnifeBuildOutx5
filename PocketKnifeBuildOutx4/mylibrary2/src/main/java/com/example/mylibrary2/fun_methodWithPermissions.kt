@@ -4,7 +4,9 @@ package com.example.mylibrary2
 import android.Manifest
 import android.content.Context
 import android.widget.Toast
+//import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
 import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
+
 lateinit var toast: Toast
 
 // QuickPermissions-Kotlin
@@ -16,6 +18,8 @@ lateinit var toast: Toast
 
 fun methodWithPermissions(mythis: Context) =
     mythis.runWithPermissions(Manifest.permission.ACCESS_FINE_LOCATION) {
+//        mythis.runWithPermissions(Manifest.permission.WRITE_CALENDAR, Manifest.permission.RECORD_AUDIO)  {
+
         // Do the stuff with permissions safely
         // TO DO fix the asynchronicity of this so that it blocks until permission is granted
         // Update: runWithPermissions() is async by design. What to do.

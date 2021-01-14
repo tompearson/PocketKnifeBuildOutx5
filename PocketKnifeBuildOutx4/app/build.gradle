@@ -44,6 +44,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation project(path: ':app:mylibrary1')
     implementation project(path: ':mylibrary2')
+    implementation project(path: ':mylibrary3')
+    implementation project(path: ':mylibrary4')
+    implementation project(path: ':mylibrary5')
+
+
+
 
 
 

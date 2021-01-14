@@ -19,6 +19,11 @@ import com.microsoft.appcenter.utils.async.AppCenterConsumer
 
 import com.example.mylibrary1.getNetworkStatus
 import com.example.mylibrary2.methodWithPermissions
+import com.example.mylibrary3.getMACAddress
+import com.example.mylibrary4.isItRooted
+import com.example.mylibrary5.getLocationStatus
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -59,10 +64,11 @@ class MainActivity : AppCompatActivity() {
         methodWithPermissions(this)
 
         textMessage.setText(getNetworkStatus(this, builder))
-//        textMessage.setText(getLocationStatus(this, builder))
+        textMessage.setText(getLocationStatus(this, builder))
 //        textMessage.setText(getBlueToothStatus(this, builder))
-//        textMessage.setText(getMACAddress(this, builder))
-//        textMessage.setText(isItRooted(this, builder))
+        textMessage.setText(getMACAddress(this, builder))
+        textMessage.setText(isItRooted(this, builder))
+
         crash_button.setOnClickListener {
             Analytics.trackEvent(
                 getString(R.string.button_crashing_clicked),

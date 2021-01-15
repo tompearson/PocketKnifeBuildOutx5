@@ -1,3 +1,5 @@
+include ':mylibrary7'
+include ':mylibrary6'
 include ':mylibrary5'
 include ':mylibrary4'
 include ':mylibrary3'//include ':quickpermissions-kotlin'

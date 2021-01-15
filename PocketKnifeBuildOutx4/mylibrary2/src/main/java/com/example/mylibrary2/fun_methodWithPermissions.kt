@@ -27,7 +27,7 @@ fun methodWithPermissions(mythis: Context) =
         toast = Toast.makeText(
             mythis,
             mythis.getString(R.string.loc_granted),
-            Toast.LENGTH_LONG
+            Toast.LENGTH_SHORT
         )
         toast.show()
     }

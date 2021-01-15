@@ -22,6 +22,8 @@ import com.example.mylibrary2.methodWithPermissions
 import com.example.mylibrary3.getMACAddress
 import com.example.mylibrary4.isItRooted
 import com.example.mylibrary5.getLocationStatus
+import com.example.mylibrary6.getBlueToothStatus
+import com.example.mylibrary7.MapsActivity
 
 
 
@@ -38,6 +40,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        Toast.makeText(this, getString(R.string.onCreate), Toast.LENGTH_SHORT).show()
 
         // Setup buttons
         button = findViewById(R.id.button_Map_id)
@@ -57,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         future.thenAccept(AppCenterConsumer {
             if (it) {
                 Analytics.trackEvent(getString(R.string.crash_detected), properties, Flags.CRITICAL)
-                Toast.makeText(this, getText(R.string.crash_oops), Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getText(R.string.crash_oops), Toast.LENGTH_SHORT).show()
             }
         })
 
@@ -65,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
         textMessage.setText(getNetworkStatus(this, builder))
         textMessage.setText(getLocationStatus(this, builder))
-//        textMessage.setText(getBlueToothStatus(this, builder))
+        textMessage.setText(getBlueToothStatus(this, builder))
         textMessage.setText(getMACAddress(this, builder))
         textMessage.setText(isItRooted(this, builder))
 
@@ -78,53 +82,52 @@ class MainActivity : AppCompatActivity() {
             Crashes.generateTestCrash()
         }
 //        Map feature
-
-//        button.setOnClickListener {
-//            Analytics.trackEvent(getString(R.string.button_map_clicked), properties, Flags.NORMAL);
-//            val intent: Intent = Intent(this, MapsActivity::class.java).apply {}
-//            startActivity(intent)
-//        }
+        button.setOnClickListener {
+            Analytics.trackEvent(getString(R.string.button_map_clicked), properties, Flags.NORMAL);
+            val intent: Intent = Intent(this, MapsActivity::class.java).apply {}
+            startActivity(intent)
+        }
     }
 
     @SuppressLint("ShowToast")
     override fun onStop() {
         super.onStop()
         Analytics.trackEvent(getString(R.string.onStop), properties, Flags.NORMAL)
-        Toast.makeText(this, getString(R.string.onStop), Toast.LENGTH_LONG)
+        Toast.makeText(this, getString(R.string.onStop), Toast.LENGTH_SHORT).show()
     }
 
     @SuppressLint("ShowToast")
     override fun onRestart() {
         super.onRestart()
         Analytics.trackEvent(getString(R.string.onRestart), properties, Flags.NORMAL)
-        Toast.makeText(this, getString(R.string.onRestart), Toast.LENGTH_LONG)
+        Toast.makeText(this, getString(R.string.onRestart), Toast.LENGTH_SHORT).show()
     }
 
     @SuppressLint("ShowToast")
     override fun onResume() {
         super.onResume()
         Analytics.trackEvent(getString(R.string.onResume), properties, Flags.NORMAL)
-        Toast.makeText(this, getString(R.string.onResume), Toast.LENGTH_LONG)
+        Toast.makeText(this, getString(R.string.onResume), Toast.LENGTH_SHORT).show()
     }
 
     @SuppressLint("ShowToast")
     override fun onStart() {
         super.onStart()
         Analytics.trackEvent(getString(R.string.onStart), properties, Flags.NORMAL)
-        Toast.makeText(this, getString(R.string.onStart), Toast.LENGTH_LONG).show()
+        Toast.makeText(this, getString(R.string.onStart), Toast.LENGTH_SHORT).show()
     }
 
     @SuppressLint("ShowToast")
     override fun onPause() {
         super.onPause()
         Analytics.trackEvent(getString(R.string.onPause), properties, Flags.NORMAL)
-        Toast.makeText(this, getString(R.string.onPause), Toast.LENGTH_LONG)
+        Toast.makeText(this, getString(R.string.onPause), Toast.LENGTH_SHORT).show()
 
     }
 
     override fun onDestroy() {
         super.onDestroy()
         Analytics.trackEvent(getString(R.string.onDestroy), properties, Flags.NORMAL)
-        Toast.makeText(this, getString(R.string.onDestroy), Toast.LENGTH_LONG)
+        Toast.makeText(this, getString(R.string.onDestroy), Toast.LENGTH_SHORT).show()
     }
 }

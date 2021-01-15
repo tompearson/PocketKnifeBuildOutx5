@@ -9,12 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PocketKnifeBuildOutx4">
+
+        <!--    google_maps_key is in google_maps_api.xml -->
+        <!--    The file is located in the Maps (library) layout; not in this application -->
+        <!--    Builder will fail if Maps library is not imported-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mylibrary7.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:parentActivityName="com.example.pocketknifebuildoutx4.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pocketknifebuildoutx4.MainActivity" />
         </activity>
     </application>
 

@@ -1,6 +1,6 @@
 <resources>
     <string name="title_home"><b>Home</b></string>
-    <string name="app_name">PocketKnife</string>
+    <string name="app_name">PocketKnife Buildout Reference</string>
     <!--All original features are libraries as will be new -->
     <!--New feature support in the app as needed i.e. buttons to enable feature such as Map
         and tests such as Appcenter Crash -->
@@ -18,6 +18,7 @@
     <string name="crash_detected">Crashes.hasCrashedInLastSession()</string>
 
     <!--    Life Cycle feature in the app only -->
+    <string name="onCreate">\nonCreate detected</string>
     <string name="onStop">\onStop detected</string>
     <string name="onRestart">\nonRestart detected</string>
     <string name="onResume">\nonResume detected</string>
